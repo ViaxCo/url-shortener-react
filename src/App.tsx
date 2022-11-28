@@ -9,8 +9,8 @@ import {
   Link,
   useToast,
 } from "@chakra-ui/react";
-import { FormEvent, useState } from "react";
 import axios from "axios";
+import { FormEvent, useState } from "react";
 
 const Form = chakra("form");
 
@@ -25,7 +25,7 @@ const App = () => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const res = await axios.post("https://spleet-shorten.herokuapp.com/api", {
+      const res = await axios.post("https://viaxco-shorten.onrender.com/api", {
         longUrl: value,
       });
       const { shortUrl } = res.data;
